@@ -3,6 +3,7 @@
 <head>
   <title>Istiqlal Toronto Prayer Times</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="main.css">
@@ -12,23 +13,28 @@
 
 <div class="page">
 
-  <!-- HEADER SECTION -->
+  <!-- ===== HEADER ===== -->
   <div class="header">
+
+    <!-- Left Side -->
     <div class="header-left">
       <div class="title">Prayer Times</div>
       <div class="dates">
-        <div id="hijri-date"></div>
-        <div id="gregorian-date"></div>
+        <div id="hijri-date">Loading Hijri...</div>
+        <div id="gregorian-date">Loading Date...</div>
       </div>
     </div>
 
+    <!-- Right Side -->
     <div class="header-right">
       <div class="time-now" id="clock">--:--:--</div>
       <div class="next-prayer" id="next-prayer">Next Prayer: --</div>
     </div>
+
   </div>
 
-  <!-- PRAYER CARDS ROW -->
+
+  <!-- ===== MAIN PRAYER ROW ===== -->
   <div class="prayer-row">
 
     <div class="card" id="fajr-card">
@@ -63,8 +69,9 @@
 
   </div>
 
-  <!-- SUNRISE + JUMMAH -->
-  <div class="secondary-row">
+
+  <!-- ===== SUNRISE + JUMMAH ===== -->
+  <div class="bottom-row">
 
     <div class="card small-card" id="sunrise-card">
       <div class="card-title">Sunrise</div>
@@ -78,7 +85,8 @@
 
   </div>
 
-  <!-- FOOTER -->
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     MASJID ISTIQLAL TORONTO
   </footer>
