@@ -2,34 +2,33 @@
 <html>
 <head>
   <title>Istiqlal Toronto Prayer Times</title>
-  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-  <!-- Header -->
-  <header>
-    <div class="title-large">ISTIQLAL TORONTO</div>
-    <div class="title-small">MASJID</div>
-  </header>
-
-  <!-- Top Row: Sunrise + Jummah -->
-  <div class="top-row">
-    <div class="top-card" id="sunrise-card">
-      <div class="card-title">Sunrise</div>
-      <div class="card-iqama" id="sunrise-time">--:--</div>
+  <!-- HEADER SECTION -->
+  <div class="header">
+    <div class="header-left">
+      <div class="title">Prayer Times</div>
+      <div class="dates">
+        <div id="hijri-date"></div>
+        <div id="gregorian-date"></div>
+      </div>
     </div>
 
-    <div class="top-card" id="jummah-card">
-      <div class="card-title">Jummah</div>
-      <div class="card-iqama" id="jummah-time">--:--</div>
+    <div class="header-right">
+      <div class="time-now" id="clock">--:--:--</div>
+      <div class="next-prayer" id="next-prayer">Next Prayer: --</div>
     </div>
   </div>
 
-  <!-- Main Prayer Cards -->
+  <!-- PRAYER CARDS ROW -->
   <div class="prayer-row">
 
     <div class="card" id="fajr-card">
@@ -64,12 +63,25 @@
 
   </div>
 
-  <!-- Time + Next Prayer -->
-  <div class="info-row">
-    <div class="hijri-date" id="hijri-date">Loading Hijri...</div>
-    <div class="clock" id="clock">--:--:--</div>
-    <div class="next-prayer" id="next-prayer">Next Prayer: --</div>
+  <!-- SUNRISE + JUMMAH -->
+  <div class="secondary-row">
+
+    <div class="card small-card" id="sunrise-card">
+      <div class="card-title">Sunrise</div>
+      <div class="card-iqama" id="sunrise-time">--:--</div>
+    </div>
+
+    <div class="card small-card" id="jummah-card">
+      <div class="card-title">Jummah</div>
+      <div class="card-iqama" id="jummah-time">--:--</div>
+    </div>
+
   </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    MASJID ISTIQLAL TORONTO
+  </footer>
 
 </div>
 
