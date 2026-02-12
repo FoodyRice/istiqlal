@@ -24,7 +24,7 @@ async function loadCSV() {
   const rows = text.trim().split("\n").map(r => r.split(","));
 
   // Remove top two rows (Excel headers)
-  const dataRows = rows.slice(2);
+  const dataRows = rows.slice(1);
 
   return dataRows.map(cols => ({
     Date: cols[0],
