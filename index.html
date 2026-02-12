@@ -3,9 +3,7 @@
 <head>
   <title>Istiqlal Toronto Prayer Times</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -13,29 +11,24 @@
 
 <div class="page">
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <div class="header">
-
-    <!-- Left Side -->
     <div class="header-left">
       <div class="title">Prayer Times</div>
       <div class="dates">
-        <div id="hijri-date">Loading Hijri...</div>
-        <div id="gregorian-date">Loading Date...</div>
+        <div id="hijri-date"></div>
+        <div id="gregorian-date"></div>
       </div>
     </div>
 
-    <!-- Right Side -->
     <div class="header-right">
-      <div class="time-now" id="clock">--:--:--</div>
+      <div class="time-now" id="clock">--:--</div>
       <div class="next-prayer" id="next-prayer">Next Prayer: --</div>
     </div>
-
   </div>
 
-
-  <!-- ===== MAIN PRAYER ROW ===== -->
-  <div class="prayer-row">
+  <!-- PRAYER GRID -->
+  <div class="prayer-grid">
 
     <div class="card" id="fajr-card">
       <div class="card-title">Fajr</div>
@@ -67,26 +60,20 @@
       <div class="card-athan" id="isha-athan"></div>
     </div>
 
-  </div>
-
-
-  <!-- ===== SUNRISE + JUMMAH ===== -->
-  <div class="bottom-row">
-
-    <div class="card small-card" id="sunrise-card">
+    <!-- BOTTOM ROW -->
+    <div class="card" id="sunrise-card">
       <div class="card-title">Sunrise</div>
       <div class="card-iqama" id="sunrise-time">--:--</div>
     </div>
 
-    <div class="card small-card" id="jummah-card">
+    <div class="card" id="jummah-card">
       <div class="card-title">Jummah</div>
       <div class="card-iqama" id="jummah-time">--:--</div>
     </div>
 
   </div>
 
-
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     MASJID ISTIQLAL TORONTO
   </footer>
