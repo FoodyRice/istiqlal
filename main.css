@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
   background: #FFFFFF;
   font-family: "DM Sans", sans-serif;
   color: #000;
@@ -10,7 +9,7 @@ body {
   padding: 40px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,33 +26,29 @@ body {
   font-size: 20px;
 }
 
-.header-right {
-  text-align: right;
-}
-
 .time-now {
   font-family: "Instrument Serif", serif;
   font-size: 44px;
-  margin-bottom: 6px;
 }
 
 .next-prayer {
   font-size: 20px;
+  margin-top: 6px;
 }
 
-/* ===== CARD LAYOUT ===== */
-.prayer-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
+/* GRID: 5 on top, 2 centered below */
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 60px;
 }
 
 .card {
-  width: 18%;
-  background: rgba(1, 58, 1, 0.05); /* 5% opacity */
-  padding: 18px;
-  border-radius: 18px;
-  transition: 0.15s;
+  background: rgba(1, 58, 1, 0.05);
+  padding: 20px;
+  border-radius: 0; /* squared corners */
+  min-height: 160px;  /* more square */
 }
 
 .card-title {
@@ -71,33 +66,30 @@ body {
   opacity: 0.7;
 }
 
-/* ===== BOTTOM ROW (Centered Sunrise + Jummah) ===== */
-.bottom-row {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-bottom: 60px;
+/* bottom cards placed in the grid */
+#sunrise-card {
+  grid-column: 2; /* aligns under Dhuhr */
 }
 
-.small-card {
-  width: 18%;
+#jummah-card {
+  grid-column: 4; /* aligns under Maghrib */
 }
 
-/* ===== ACTIVE CARD ===== */
+/* ACTIVE CARD */
 .card.active {
   background: #013A01 !important;
-  color: white !important;
+  color: white;
 }
 
 .card.active * {
   color: white !important;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
-  margin-top: 40px;
   text-align: center;
-  font-size: 32px;
   font-family: "Instrument Serif", serif;
+  font-size: 32px;
+  margin-top: 50px;
   opacity: 0.85;
 }
