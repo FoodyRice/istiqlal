@@ -1,85 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Istiqlal Toronto Prayer Times</title>
+  <meta charset="UTF-8" />
+  <title>Masjid Istiqlal Prayer Times</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-<div class="page">
+  <div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <div class="title">Prayer Times</div>
-      <div class="dates">
-        <div id="hijri-date"></div>
-        <div id="gregorian-date"></div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="left">
+        <h1 class="title">Prayer Times</h1>
+        <div class="dates">
+          <div id="hijri-date" class="date hijri"></div>
+          <div id="gregorian-date" class="date gregorian"></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div id="clock" class="clock"></div>
+        <div id="next-prayer" class="next-prayer"></div>
       </div>
     </div>
 
-    <div class="header-right">
-      <div class="time-now" id="clock">--:--</div>
-      <div class="next-prayer" id="next-prayer">Next Prayer: --</div>
-    </div>
-  </div>
+    <!-- MAIN GRID -->
+    <div class="prayer-grid">
 
-  <!-- PRAYER GRID -->
-  <div class="prayer-grid">
+      <div class="card" id="fajr-card">
+        <div class="card-title">Fajr</div>
+        <div class="card-iqama" id="fajr-iqama">--:--</div>
+        <div class="card-athan" id="fajr-athan">Athan at --:--</div>
+      </div>
 
-    <div class="card" id="fajr-card">
-      <div class="card-title">Fajr</div>
-      <div class="card-iqama" id="fajr-iqama">--:--</div>
-      <div class="card-athan" id="fajr-athan"></div>
-    </div>
+      <div class="card" id="dhuhr-card">
+        <div class="card-title">Dhuhr</div>
+        <div class="card-iqama" id="dhuhr-iqama">--:--</div>
+        <div class="card-athan" id="dhuhr-athan">Athan at --:--</div>
+      </div>
 
-    <div class="card" id="dhuhr-card">
-      <div class="card-title">Dhuhr</div>
-      <div class="card-iqama" id="dhuhr-iqama">--:--</div>
-      <div class="card-athan" id="dhuhr-athan"></div>
-    </div>
+      <div class="card" id="asr-card">
+        <div class="card-title">Asr</div>
+        <div class="card-iqama" id="asr-iqama">--:--</div>
+        <div class="card-athan" id="asr-athan">Athan at --:--</div>
+      </div>
 
-    <div class="card" id="asr-card">
-      <div class="card-title">Asr</div>
-      <div class="card-iqama" id="asr-iqama">--:--</div>
-      <div class="card-athan" id="asr-athan"></div>
-    </div>
+      <div class="card" id="maghrib-card">
+        <div class="card-title">Maghrib</div>
+        <div class="card-iqama" id="maghrib-iqama">--:--</div>
+        <div class="card-athan" id="maghrib-athan">Athan at --:--</div>
+      </div>
 
-    <div class="card" id="maghrib-card">
-      <div class="card-title">Maghrib</div>
-      <div class="card-iqama" id="maghrib-iqama">--:--</div>
-      <div class="card-athan" id="maghrib-athan"></div>
-    </div>
+      <div class="card" id="isha-card">
+        <div class="card-title">Isha</div>
+        <div class="card-iqama" id="isha-iqama">--:--</div>
+        <div class="card-athan" id="isha-athan">Athan at --:--</div>
+      </div>
 
-    <div class="card" id="isha-card">
-      <div class="card-title">Isha</div>
-      <div class="card-iqama" id="isha-iqama">--:--</div>
-      <div class="card-athan" id="isha-athan"></div>
     </div>
 
     <!-- BOTTOM ROW -->
-    <div class="card" id="sunrise-card">
-      <div class="card-title">Sunrise</div>
-      <div class="card-iqama" id="sunrise-time">--:--</div>
+    <div class="bottom-row">
+      <div class="card" id="sunrise-card">
+        <div class="card-title">Sunrise</div>
+        <div class="card-iqama" id="sunrise-time">--:--</div>
+      </div>
+
+      <div class="card" id="jummah-card">
+        <div class="card-title">Jummah</div>
+        <div class="card-iqama" id="jummah-time">--:--</div>
+      </div>
     </div>
 
-    <div class="card" id="jummah-card">
-      <div class="card-title">Jummah</div>
-      <div class="card-iqama" id="jummah-time">--:--</div>
+    <!-- FOOTER -->
+    <div class="footer">
+      MASJID ISTIQLAL
     </div>
 
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    MASJID ISTIQLAL TORONTO
-  </footer>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
