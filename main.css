@@ -1,95 +1,112 @@
 body {
   margin: 0;
-  background: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
-  color: #000;
+  background: #ffffff;
+  font-family: 'DM Sans', sans-serif;
 }
 
-.page {
+.container {
   padding: 40px;
 }
 
-/* HEADER */
-.header {
+.top-bar {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 40px;
 }
 
+/* LEFT HEADER */
 .title {
-  font-family: "Instrument Serif", serif;
-  font-size: 52px;
+  font-family: 'Instrument Serif', serif;
+  font-size: 60px;
+  margin: 0;
 }
 
 .dates {
-  margin-top: 8px;
-  font-size: 20px;
+  margin-top: 10px;
 }
 
-.time-now {
-  font-family: "Instrument Serif", serif;
-  font-size: 44px;
+.date {
+  font-size: 20px;
+  color: #6D6D6D;
+}
+
+/* RIGHT HEADER */
+.clock {
+  font-family: 'Instrument Serif', serif;
+  font-size: 45px;
+  text-align: right;
 }
 
 .next-prayer {
-  font-size: 20px;
+  text-align: right;
   margin-top: 6px;
+  font-size: 20px;
+  color: #6D6D6D;
 }
 
-/* GRID: 5 on top, 2 centered below */
+/* MAIN PRAYER GRID (TOP 5) */
 .prayer-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 24px;
-  margin-bottom: 60px;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .card {
   background: rgba(1, 58, 1, 0.05);
   padding: 20px;
-  border-radius: 0; /* squared corners */
-  min-height: 160px;  /* more square */
+  border-radius: 0;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card-title {
   font-size: 26px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .card-iqama {
   font-size: 34px;
   font-weight: 700;
+  color: #013A01;
 }
 
 .card-athan {
-  font-size: 18px;
-  opacity: 0.7;
+  font-size: 16px;
+  color: #6D6D6D;
+  margin-top: 4px;
 }
 
-/* bottom cards placed in the grid */
-#sunrise-card {
-  grid-column: 2; /* aligns under Dhuhr */
+/* BOTTOM ROW */
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
+#sunrise-card,
 #jummah-card {
-  grid-column: 4; /* aligns under Maghrib */
+  min-height: 120px;
 }
 
-/* ACTIVE CARD */
+/* ACTIVE HIGHLIGHT */
 .card.active {
   background: #013A01 !important;
-  color: white;
 }
 
 .card.active * {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 /* FOOTER */
 .footer {
-  text-align: center;
-  font-family: "Instrument Serif", serif;
-  font-size: 32px;
   margin-top: 50px;
-  opacity: 0.85;
+  font-family: 'Instrument Serif', serif;
+  text-align: center;
+  font-size: 50px;
+  color: #000;
 }
