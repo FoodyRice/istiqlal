@@ -151,8 +151,20 @@ async function main() {
   document.getElementById("next-prayer").textContent = `Next Prayer: ${next}`;
 
   updateHijriDate(row);
+
+  
 }
 
 startClock();
 main();
 setInterval(main, 60000); // refresh every minute
+
+
+document.getElementById("gregorian-date").textContent =
+  new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
