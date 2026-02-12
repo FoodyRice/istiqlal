@@ -159,7 +159,6 @@ startClock();
 main();
 setInterval(main, 60000); // refresh every minute
 
-
 document.getElementById("gregorian-date").textContent =
   new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -167,4 +166,5 @@ document.getElementById("gregorian-date").textContent =
     month: "long",
     day: "numeric"
   });
+
 
