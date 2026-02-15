@@ -189,21 +189,23 @@ function updateCountdown(today, friday) {
 // =========================
 // HIJRI DATE (after Maghrib)
 // =========================
-function updateHijri(today) {
+function updateHijriDate(row) {
+  const Maghrib = timeToMinutes(row["MaghribA"]);
   const now = new Date();
-  const nowMin = now.getHours() * 60 + now.getMinutes();
+  let date = new Date();
 
-  const mag = timeToMinutes(today.MaghribA);
-  if (nowMin >= mag) now.setDate(now.getDate() + 1);
+  // New Islamic day begins at Maghrib
+  const nowMin = now.getHours() * 60 + now.getMinutes();
+  if (nowMin >= Maghrib) {
+    date.setDate(date.getDate() + 1);
+  }
+
+  const hijri = new HijriDate(date);
 
   document.getElementById("hijri-date").textContent =
-    now.toLocaleDateString("en-US-u-ca-islamic", {
-      weekday: "short",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
+    `${hijri.format("iD iMMMM iYYYY")} AH`;
 }
+
 
 
 // =========================
